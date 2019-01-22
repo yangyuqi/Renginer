@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/repair_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/new_publish_title_layout"
+        layout="@layout/common_title_layout" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/new_publish_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/new_publish_bottom_layout"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/new_publish_title_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_fragment_bg_color"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp"
+                android:visibility="visible"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="组织："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+
+                <TextView
+                    android:id="@+id/new_publish_org_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/font_size_10dp"
+                    android:textColor="@color/black_2a2a2a_color"
+                    android:textSize="@dimen/font_size_14dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请求人："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+
+                <TextView
+                    android:id="@+id/new_publish_requestMan_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/font_size_10dp"
+                    android:textColor="@color/black_2a2a2a_color"
+                    android:textSize="@dimen/font_size_14dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请求日期："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/_repair_pop_small_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/font_size_20dp"
+                    android:layout_marginStart="@dimen/font_size_10dp"
+                    android:background="@drawable/shape_modify_password_edit_bg"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/new_publish_requestDate_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:hint="请选择请求日期"
+                        android:maxLines="1"
+                        android:paddingEnd="@dimen/font_size_10dp"
+                        android:paddingStart="@dimen/font_size_10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_bec3c7_color"
+                        android:textSize="@dimen/font_size_16sp" />
+
+                    <ImageView
+                        android:id="@+id/new_publish_requestDate_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/date_choice_icon" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="优先级："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <LinearLayout
+                    android:id="@+id/new_publish_priority_pop"
+                    android:layout_width="@dimen/_repair_pop_middle_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/font_size_20dp"
+                    android:layout_marginStart="@dimen/font_size_10dp"
+                    android:background="@drawable/shape_modify_password_edit_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/new_publish_priority_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/font_size_10dp"
+                        android:layout_weight="1"
+                        android:text="@string/choice"
+                        android:textColor="@color/black_2a2a2a_color"
+                        android:textSize="@dimen/font_size_14dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/font_size_10dp"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/show_popwindow_icon" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingBottom="6dp"-->
+            <!--android:paddingEnd="@dimen/font_size_10dp"-->
+            <!--android:paddingStart="@dimen/font_size_10dp"-->
+            <!--android:paddingTop="6dp"-->
+            <!--android:visibility="visible">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="影响："-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/font_size_16sp" />-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/new_publish_effect_pop"-->
+            <!--android:layout_width="@dimen/_repair_pop_large_width"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginEnd="@dimen/font_size_20dp"-->
+            <!--android:layout_marginStart="@dimen/font_size_10dp"-->
+            <!--android:background="@drawable/shape_modify_password_edit_bg"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/new_publish_effect_text"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="@dimen/font_size_10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="@string/choice"-->
+            <!--android:textColor="@color/black_2a2a2a_color"-->
+            <!--android:textSize="@dimen/font_size_14dp" />-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="@dimen/font_size_10dp"-->
+            <!--android:contentDescription="@null"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@mipmap/show_popwindow_icon" />-->
+            <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="@color/gray_95a5a5_color" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingBottom="6dp"-->
+            <!--android:paddingEnd="@dimen/font_size_10dp"-->
+            <!--android:paddingStart="@dimen/font_size_10dp"-->
+            <!--android:paddingTop="6dp"-->
+            <!--android:visibility="visible">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="发布状态："-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/font_size_16sp" />-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/new_publish_state_pop"-->
+            <!--android:layout_width="@dimen/_repair_pop_small_width"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginEnd="@dimen/font_size_20dp"-->
+            <!--android:layout_marginStart="@dimen/font_size_10dp"-->
+            <!--android:background="@drawable/shape_modify_password_edit_bg"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/new_publish_state_text"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="@dimen/font_size_10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="@string/choice"-->
+            <!--android:textColor="@color/black_2a2a2a_color"-->
+            <!--android:textSize="@dimen/font_size_14dp" />-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="@dimen/font_size_10dp"-->
+            <!--android:contentDescription="@null"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@mipmap/show_popwindow_icon" />-->
+            <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="@color/gray_95a5a5_color" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标题："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <EditText
+                    android:id="@+id/new_publish_title_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/font_size_20dp"
+                    android:layout_marginStart="@dimen/font_size_10dp"
+                    android:background="@drawable/shape_modify_password_edit_bg"
+                    android:ellipsize="end"
+                    android:hint="请输入标题"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/font_size_10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_bec3c7_color"
+                    android:textSize="@dimen/font_size_16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/font_size_15dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="内容："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <EditText
+                    android:id="@+id/new_publish_content_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/font_size_10dp"
+                    android:background="@drawable/shape_modify_password_edit_bg"
+                    android:gravity="top|start"
+                    android:hint="请输入内容"
+                    android:padding="@dimen/font_size_10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_bec3c7_color"
+                    android:textSize="@dimen/font_size_16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="计划开始时间："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/font_size_20dp"
+                    android:layout_marginStart="@dimen/font_size_10dp"
+                    android:background="@drawable/shape_modify_password_edit_bg"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/new_publish_planStartDate_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:hint="请输入计划开始时间"
+                        android:maxLines="1"
+                        android:paddingEnd="@dimen/font_size_10dp"
+                        android:paddingStart="@dimen/font_size_10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_bec3c7_color"
+                        android:textSize="@dimen/font_size_16sp" />
+
+                    <ImageView
+                        android:id="@+id/new_publish_planStartDate_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/date_choice_icon" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="计划结束时间："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/font_size_20dp"
+                    android:layout_marginStart="@dimen/font_size_10dp"
+                    android:background="@drawable/shape_modify_password_edit_bg"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/new_publish_planEndDate_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:hint="请输入计划结束时间"
+                        android:maxLines="1"
+                        android:paddingEnd="@dimen/font_size_10dp"
+                        android:paddingStart="@dimen/font_size_10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_bec3c7_color"
+                        android:textSize="@dimen/font_size_16sp" />
+
+                    <ImageView
+                        android:id="@+id/new_publish_planEndDate_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/date_choice_icon" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="审批人："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <LinearLayout
+                    android:id="@+id/new_publish_approver_pop"
+                    android:layout_width="@dimen/_repair_pop_middle_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/font_size_20dp"
+                    android:layout_marginStart="@dimen/font_size_10dp"
+                    android:background="@drawable/shape_modify_password_edit_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/new_publish_approver_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/font_size_10dp"
+                        android:layout_weight="1"
+                        android:text="@string/choice"
+                        android:textColor="@color/black_2a2a2a_color"
+                        android:textSize="@dimen/font_size_14dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/font_size_10dp"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/show_popwindow_icon" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingBottom="6dp"-->
+            <!--android:paddingEnd="@dimen/font_size_10dp"-->
+            <!--android:paddingStart="@dimen/font_size_10dp"-->
+            <!--android:paddingTop="6dp"-->
+            <!--android:visibility="visible">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="审批日期："-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/font_size_16sp" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginEnd="@dimen/font_size_20dp"-->
+            <!--android:layout_marginStart="@dimen/font_size_10dp"-->
+            <!--android:background="@drawable/shape_modify_password_edit_bg"-->
+            <!--android:focusable="true"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/new_publish_approvalDate_edit"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@null"-->
+            <!--android:ellipsize="end"-->
+            <!--android:hint="请输入审批时间"-->
+            <!--android:maxLines="1"-->
+            <!--android:paddingEnd="@dimen/font_size_10dp"-->
+            <!--android:paddingStart="@dimen/font_size_10dp"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textColorHint="@color/gray_bec3c7_color"-->
+            <!--android:textSize="@dimen/font_size_16sp" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/new_publish_approvalDate_img"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:contentDescription="@null"-->
+            <!--android:padding="10dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@mipmap/date_choice_icon" />-->
+            <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="@color/gray_95a5a5_color" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="@dimen/font_size_15dp"-->
+            <!--android:visibility="visible">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="审批意见："-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/font_size_16sp" />-->
+
+            <!--<com.qxmagic.railwayengineerternimal.widget.MyEditText-->
+            <!--android:id="@+id/new_publish_opinion_edit"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:layout_marginTop="@dimen/font_size_10dp"-->
+            <!--android:background="@drawable/shape_modify_password_edit_bg"-->
+            <!--android:gravity="top|start"-->
+            <!--android:hint="请输入审批意见"-->
+            <!--android:padding="@dimen/font_size_10dp"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textColorHint="@color/gray_bec3c7_color"-->
+            <!--android:textSize="@dimen/font_size_16sp" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="@color/gray_95a5a5_color" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关联事件："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+
+                <TextView
+                    android:id="@+id/new_publish_relationEvent_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/font_size_10dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black_2a2a2a_color"
+                    android:textSize="@dimen/font_size_14dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关联问题："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/new_publish_relationQuestion_pop"-->
+                    <!--android:layout_width="@dimen/_repair_pop_small_width"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginEnd="@dimen/font_size_20dp"-->
+                    <!--android:layout_marginStart="@dimen/font_size_10dp"-->
+                    <!--android:background="@drawable/shape_modify_password_edit_bg"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <TextView
+                        android:id="@+id/new_publish_relationQuestion_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/font_size_10dp"
+                        android:textColor="@color/black_2a2a2a_color"
+                        android:textSize="@dimen/font_size_16dp" />
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginEnd="@dimen/font_size_10dp"-->
+                        <!--android:contentDescription="@null"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/show_popwindow_icon" />-->
+                <!--</LinearLayout>-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关联变更："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/new_publish_relationChange_pop"-->
+                    <!--android:layout_width="@dimen/_repair_pop_small_width"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginEnd="@dimen/font_size_20dp"-->
+                    <!--android:layout_marginStart="@dimen/font_size_10dp"-->
+                    <!--android:background="@drawable/shape_modify_password_edit_bg"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <TextView
+                        android:id="@+id/new_publish_relationChange_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/font_size_10dp"
+                        android:textColor="@color/black_2a2a2a_color"
+                        android:textSize="@dimen/font_size_16dp" />
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginEnd="@dimen/font_size_10dp"-->
+                        <!--android:contentDescription="@null"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@mipmap/show_popwindow_icon" />-->
+                <!--</LinearLayout>-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingEnd="@dimen/font_size_10dp"
+                android:paddingStart="@dimen/font_size_10dp"
+                android:paddingTop="6dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关联知识："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <LinearLayout
+                    android:id="@+id/new_publish_relationKnowledge_pop"
+                    android:layout_width="@dimen/_repair_pop_small_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/font_size_20dp"
+                    android:layout_marginStart="@dimen/font_size_10dp"
+                    android:background="@drawable/shape_modify_password_edit_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/new_publish_relationKnowledge_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/font_size_10dp"
+                        android:layout_weight="1"
+                        android:text="@string/choice"
+                        android:textColor="@color/black_2a2a2a_color"
+                        android:textSize="@dimen/font_size_14dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/font_size_10dp"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/show_popwindow_icon" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_95a5a5_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/font_size_10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上传附件："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <TextView
+                    android:id="@+id/new_publish_select_file_text"
+                    android:layout_width="120dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_shape_select_file"
+                    android:gravity="center"
+                    android:text="选择文件"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_16sp" />
+
+                <TextView
+                    android:id="@+id/new_publish_attach_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/new_publish_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_95a5a5_color" />
+
+        <TextView
+            android:id="@+id/new_publish_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_10dp"
+            android:background="@drawable/shape_modify_password_confirmbtn_bg"
+            android:gravity="center"
+            android:text="创建"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp" />
+    </LinearLayout>
+</RelativeLayout>

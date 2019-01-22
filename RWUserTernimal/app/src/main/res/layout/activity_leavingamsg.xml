@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_fragment_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/font_size_15dp"
+        android:paddingStart="@dimen/font_size_15dp"
+        android:paddingTop="@dimen/font_size_10dp">
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/msg_title"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/font_size_16dp" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/msg_title"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_marginEnd="@dimen/font_size_20dp"-->
+                <!--android:background="@drawable/shape_modify_password_edit_bg"-->
+                <!--android:hint="请输入留言标题"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textColorHint="@color/gray_cfdce2_color"-->
+                <!--android:textSize="@dimen/font_size_16dp" />-->
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/font_size_15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_evaluate"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_16dp" />
+
+            <RatingBar
+                android:id="@+id/msg_ratingBar"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:stepSize="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/font_size_15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_16dp" />
+
+            <EditText
+                android:id="@+id/msg_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/font_size_10dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="@dimen/font_size_10dp"
+                android:background="@drawable/shape_modify_password_edit_bg"
+                android:gravity="top|left"
+                android:hint="请输入留言内容"
+                android:minHeight="200dp"
+                android:padding="@dimen/font_size_10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_cfdce2_color"
+                android:textSize="@dimen/font_size_16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_95a5a5_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="@dimen/font_size_10dp">
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_modify_password_confirmbtn_bg"
+            android:clickable="true"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_95a5a5_color" />
+</LinearLayout>

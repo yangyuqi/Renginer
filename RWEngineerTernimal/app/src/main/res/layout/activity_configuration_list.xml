@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/configuration_list_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_fragment_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/font_size_10dp"
+        android:paddingEnd="@dimen/font_size_15dp"
+        android:paddingStart="@dimen/font_size_15dp"
+        android:paddingTop="@dimen/font_size_10dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/configuration_editText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_modify_password_edit_bg"
+            android:ellipsize="end"
+            android:hint="@string/configuration_list_hint"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/font_size_15dp"
+            android:paddingStart="@dimen/font_size_15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_c3c9cc_color"
+            android:textSize="@dimen/font_size_16sp" />
+
+        <ImageView
+            android:id="@+id/configuration_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_shape_search_btn"
+            android:contentDescription="@null"
+            android:paddingEnd="@dimen/font_size_20dp"
+            android:paddingStart="@dimen/font_size_20dp"
+            android:scaleType="center"
+            android:src="@mipmap/search_icon" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_95a5a5_color" />
+
+    <com.qxmagic.railwayengineerternimal.library.recyclerview.HRecyclerView
+        android:id="@+id/configuration_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:loadMoreEnabled="true"
+        app:loadMoreFooterLayout="@layout/layout_hrecyclerview_load_footer"
+        app:refreshEnabled="true"
+        app:refreshHeaderLayout="@layout/layout_hrecyclerview_refresh_header" />
+</LinearLayout>

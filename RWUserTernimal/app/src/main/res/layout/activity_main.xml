@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 内容 -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigate_top_line"
+        android:layout_alignParentTop="true" />
+
+    <View
+        android:id="@+id/navigate_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_above="@+id/main_navigate"
+        android:background="@color/gray_a0a0a0_color" />
+
+    <LinearLayout
+        android:id="@+id/main_navigate"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/main_event_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/main_event_text"
+                style="@style/main_navi_txt_style"
+                android:text="@string/main_event" />
+
+            <ImageView
+                android:id="@+id/main_event_img"
+                style="@style/main_navi_img_style"
+                android:layout_above="@id/main_event_text"
+                android:background="@drawable/selector_main_event"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_service_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/main_service_text"
+                style="@style/main_navi_txt_style"
+                android:text="@string/main_service" />
+
+            <ImageView
+                android:id="@+id/main_service_img"
+                style="@style/main_navi_img_style"
+                android:layout_above="@id/main_service_text"
+                android:background="@drawable/selector_main_service"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_mine_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/main_mine_text"
+                style="@style/main_navi_txt_style"
+                android:text="@string/main_mine" />
+
+            <ImageView
+                android:id="@+id/main_mine_img"
+                style="@style/main_navi_img_style"
+                android:layout_above="@id/main_mine_text"
+                android:background="@drawable/selector_main_mine"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

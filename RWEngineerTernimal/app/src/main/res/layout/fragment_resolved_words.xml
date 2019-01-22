@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_fragment_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/font_size_15dp"
+        android:paddingStart="@dimen/font_size_15dp"
+        android:paddingTop="@dimen/font_size_15dp">
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/msg_title"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="@dimen/font_size_16sp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/words_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="@dimen/font_size_10dp"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="@dimen/font_size_16sp" />-->
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_evaluate"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_16sp" />
+
+            <RatingBar
+                android:id="@+id/words_ratingBar"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/font_size_10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/font_size_10dp"
+            android:layout_marginTop="@dimen/font_size_10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_16sp" />
+
+            <TextView
+                android:id="@+id/words_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/font_size_10dp"
+                android:gravity="top|start"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_cfdce2_color"
+                android:textSize="@dimen/font_size_16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_95a5a5_color" />
+</LinearLayout>

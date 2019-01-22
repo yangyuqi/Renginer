@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <root-path
+            name="portrait"
+            path="" />
+        <external-path path="Download" name="download"/>
+    </paths>
+</resources>

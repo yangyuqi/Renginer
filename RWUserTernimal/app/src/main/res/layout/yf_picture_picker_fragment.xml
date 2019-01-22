@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@android:color/black" >
+
+        <GridView
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent_color"
+            android:cacheColorHint="@color/transparent_color"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:horizontalSpacing="2dip"
+            android:listSelector="@mipmap/transparent"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:verticalSpacing="2dip" />
+
+        <TextView
+            android:id="@+id/timeline_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#cc000000"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            android:paddingTop="5dp"
+            android:textColor="#CDCECE"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:id="@+id/picker_image_preview"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:gravity="center"
+            android:text="预览"
+            android:textColor="#686868"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/picker_image_select_num"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:textColor="#686868"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/picker_confirm"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#686868"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

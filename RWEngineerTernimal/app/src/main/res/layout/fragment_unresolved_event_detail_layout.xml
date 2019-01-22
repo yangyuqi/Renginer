@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_fragment_bg_color"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/unresolved_event_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/unresolved_event_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_95a5a5_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/font_size_20dp"
+        android:paddingStart="@dimen/font_size_20dp">
+
+        <TextView
+            android:id="@+id/unresolved_resolved_text"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_shape_resolved"
+            android:gravity="center"
+            android:text="@string/event_already_solved"
+            android:textColor="@color/blue_2f80e7_color"
+            android:textSize="@dimen/font_size_18sp" />
+
+        <TextView
+            android:id="@+id/unresolved_reassign_text"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/font_size_20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_shape_reassign"
+            android:gravity="center"
+            android:text="@string/event_reassign"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_18sp" />
+    </LinearLayout>
+
+</LinearLayout>

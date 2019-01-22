@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_fragment_bg_color"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_corner_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/photo_choose_camera"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:gravity="center"
+            android:text="拍照"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/gray_cfdce2_color" />
+
+        <TextView
+            android:id="@+id/photo_choose_local"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:gravity="center"
+            android:text="从手机相册选取"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/photo_choose_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14dp" />
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="_images_width">93dp</dimen>
+    <dimen name="_images_height">93dp</dimen>
+    <dimen name="_repair_pop_large_width">313dp</dimen>
+    <dimen name="_repair_pop_middle_width">296dp</dimen>
+    <dimen name="_repair_pop_small_width">280dp</dimen>
+    <dimen name="_ratingBar_height">25dp</dimen>
+</resources>

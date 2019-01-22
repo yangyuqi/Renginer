@@ -1,0 +1,170 @@
+<resources>
+    <string name="app_name">南京中铁信</string>
+
+    <!-- 登录/忘记密码 -->
+    <string name="login_username_hint">输入账号</string>
+    <string name="login_password_hint">输入密码</string>
+    <string name="remember_password">记住密码</string>
+    <string name="forgot_password">忘记密码</string>
+    <string name="login">登录</string>
+    <string name="edit_phone_hint">请输入手机号</string>
+    <string name="get_ver_code">获取验证码</string>
+    <string name="ver_code_hint">请输入验证码</string>
+
+    <string name="user_client">工程师端</string>
+
+    <string name="reception_desk">服务台</string>
+    <string name="knowledge_base">知识库</string>
+    <string name="configuration_items">配置项</string>
+    <string name="mine">我的</string>
+
+    <string name="reception_event">事件</string>
+    <string name="reception_request">问题</string>
+    <string name="reception_a">件</string>
+
+    <string name="event_already_solved">已解决</string>
+    <string name="event_tobe_solved">待解决</string>
+    <string name="event_reassign">重新指派</string>
+
+    <string name="waiting_confirm">正在等待服务台确认完成，请稍后.....</string>
+    <string name="already_confirm">确认成功</string>
+    <string name="add_to_knowledge">前往添加知识库</string>
+    
+    <string name="add_knowledge">添加知识库</string>
+    <string name="knowledge_detail">知识详情</string>
+    <string name="add_knowledge_title">知识名称：</string>
+    <string name="add_knowledge_author">创建人：</string>
+    <string name="add_knowledge_time">创建时间：</string>
+    <string name="add_knowledge_type">知识类型：</string>
+    <string name="add_knowledge_relate_question">关联问题：</string>
+    <string name="add_knowledge_description">知识描述：</string>
+
+    <string name="new_question">新建问题</string>
+    <string name="question_number">标题：</string>
+    <string name="question_service">服务：</string>
+    <string name="priority">优先级：</string>
+
+    <string name="new_publish">新建发布</string>
+    <string name="publish_number">标题：</string>
+    <string name="publish_relation_event">关联事件：</string>
+    <string name="publish_relation_question">关联问题：</string>
+    <string name="publish_relation_change">关联变更：</string>
+    <string name="publish_relation_knowledge">关联知识：</string>
+    <string name="publish_attach">附件</string>
+
+    <string name="new_change">新建变更</string>
+    <string name="change_number">标题：</string>
+    <string name="change_type">类型：</string>
+
+    <string name="event_resolved">已解决事件</string>
+    <string name="event_unresolved">未解决事件</string>
+    <string name="event_reassign_event">重新指派事件</string>
+
+    <string name="repair_description">填写报修描述：</string>
+
+    <string name="event_already_delivery">已派送</string>
+    <string name="event_already_arrive">到场维护</string>
+    <string name="event_already_finish">已完成</string>
+    <string name="event_appointment_time">双方约定到场维修时间：</string>
+    <string name="event_organization">组织：</string>
+    <string name="event_appointment_person">指派人：</string>
+    <string name="event_state">状态：</string>
+    <string name="title">标题：</string>
+    <string name="description">描述：</string>
+    <string name="event_repair_images">报修图片：</string>
+    <string name="msg_title">留言标题：</string>
+    <string name="msg_content">留言内容：</string>
+    <string name="msg_evaluate">我的评价：</string>
+
+    <string name="fault_type">故障类型:</string>
+    <string name="service_type">服务类型:</string>
+    <string name="start_time">开始时间:</string>
+    <string name="event_number">标题:</string>
+    <string name="urgency_level">紧急程度:</string>
+    <string name="appointed_person">指派人:</string>
+
+    <string name="knowledge_base_hint">输入用户请求号/标题</string>
+    <string name="knowledge_item_username">创建人：</string>
+    <string name="knowledge_item_type">知识类型：</string>
+    <string name="knowledge_item_storage_time">入库时间：</string>
+    <string name="knowledge_item_relate_question">关联问题：</string>
+
+    <string name="configuration_list_hint">输入用户请求号/标题</string>
+    <string name="configuration_item_type">配置项类型：</string>
+    <string name="configuration_item_org">所属组织：</string>
+    <string name="configuration_item_priority">业务优先级：</string>
+    <string name="configuration_item_startTime">开始使用时间：</string>
+
+    <string name="mine_user">admin</string>
+    <string name="mine_logout">注销</string>
+    <string name="mine_modify_password">修改密码</string>
+    <string name="mine_about_us">关于我们</string>
+    <string name="mine_setting">设置</string>
+    <string name="edit_original_password">请输入原始密码</string>
+    <string name="edit_new_password">请输入新密码</string>
+    <string name="edit_confirm_password">请再次输入新密码</string>
+    <string name="setting_msg_push">推送消息设置</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="check_update">检查更新</string>
+
+    <string name="confirm">提交</string>
+    <string name="cancel">取消</string>
+    <string name="success">成功</string>
+    <string name="fail">失败</string>
+    <string name="delete">删除</string>
+    <string name="choice">请选择</string>
+    <string name="all">全部</string>
+    <string name="next">下一步</string>
+
+
+    <string-array name="organization">
+        <item>中国长江航运集团南京油运股份有限公司</item>
+        <item>南京中铁信息工程有限公司</item>
+        <item>南京叁壹叁信息工程有限公司</item>
+        <item>技术中心</item>
+        <item>江苏省公安厅</item>
+        <item>江苏省农村信用合作社</item>
+        <item>江苏省泰兴市兴化地方税务局</item>
+        <item>江苏省财政厅财政信息管理中心</item>
+        <item>泛盈科技</item>
+        <item>盐城公安</item>
+        <item>连云港财政局</item>
+        <item>镇江市公安局</item>
+    </string-array>
+    <string-array name="effect">
+        <item>部门</item>
+        <item>服务</item>
+        <item>个人</item>
+    </string-array>
+    <string-array name="urgency_level">
+        <item>高</item>
+        <item>中</item>
+        <item>低</item>
+    </string-array>
+    <string-array name="parent_request">
+        <item>P_000111</item>
+        <item>P_000131</item>
+        <item>P_000127</item>
+    </string-array>
+    <string-array name="parent_event">
+        <item>L_000026</item>
+        <item>L_000025</item>
+        <item>L_000127</item>
+    </string-array>
+    <string-array name="parent_problem">
+        <item>Q_110</item>
+        <item>Q_120</item>
+        <item>Q_119</item>
+    </string-array>
+    <string-array name="parent_change">
+        <item>C_11FD0</item>
+        <item>C_12FSDA0</item>
+        <item>C_11FSDA9</item>
+    </string-array>
+
+    <string-array name="new_change_type">
+        <item>一般变更</item>
+        <item>例行变更</item>
+        <item>紧急变更</item>
+    </string-array>
+</resources>

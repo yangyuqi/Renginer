@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/confirm_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include layout="@layout/common_title_layout"/>
+
+    <ImageView
+        android:id="@+id/confirm_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="180dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/waiting_icon" />
+
+    <TextView
+        android:id="@+id/confirm_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirm_image"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/font_size_20dp"
+        android:text="@string/waiting_confirm"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_16sp" />
+
+    <LinearLayout
+        android:id="@+id/add_to_knowledge_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_d7d7d7_color"
+        android:gravity="center"
+        android:padding="@dimen/font_size_15dp">
+
+        <TextView
+            android:id="@+id/add_to_knowledge"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/shape_modify_password_confirmbtn_bg"
+            android:gravity="center"
+            android:text="@string/add_to_knowledge"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

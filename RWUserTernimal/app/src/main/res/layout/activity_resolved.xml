@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.qxmagic.railwayuserterminal.ui.event.UnresolvedActivity">
+
+    <include
+        android:id="@+id/resolved_title_layout"
+        layout="@layout/common_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/resolved_checkbox_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/resolved_title_layout"
+        android:background="@color/white_fafbfc_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/font_size_15dp"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/resolved_checkBox"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/bg_checkbox"
+            android:button="@null"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/resolved_selected_event_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/font_size_20dp"
+            android:textColor="@color/gray_97a4a5_color"
+            android:textSize="@dimen/font_size_14dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/resolved_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/resolved_checkbox_layout"
+        android:background="@color/gray_95a5a5_color" />
+
+    <com.qxmagic.railwayuserterminal.library.recyclerview.HRecyclerView
+        android:id="@+id/resolved_recyclerView"
+        app:loadMoreEnabled="true"
+        app:refreshEnabled="true"
+        app:loadMoreFooterLayout="@layout/layout_hrecyclerview_load_footer"
+        app:refreshHeaderLayout="@layout/layout_hrecyclerview_refresh_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_fragment_bg_color"
+        android:layout_above="@+id/resolved_bottom_layout"
+        android:layout_below="@+id/resolved_line" />
+
+    <LinearLayout
+        android:id="@+id/resolved_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/font_size_10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/resolved_delete_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_deletebtn_bg"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16dp" />
+
+        <TextView
+            android:id="@+id/resolved_cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/font_size_15dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_modify_password_edit_bg"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_16dp" />
+    </LinearLayout>
+</RelativeLayout>
